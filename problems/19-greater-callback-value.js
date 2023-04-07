@@ -18,13 +18,16 @@ console.log(greaterCallbackValue(1, doubler, squarer));     // 2
 console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
 *******************************************************************************/
 
-let greaterCallbackValue = function() {
+let greaterCallbackValue = function (val, cb1, cb2) {
+  let num1 = cb1(val);
+  let num2 = cb2(val);
 
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
 };
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = greaterCallbackValue;

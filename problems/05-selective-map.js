@@ -81,10 +81,5 @@ console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isEven, flipSign));
 console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isPositive, square));
 // [-10, 16, 49, 36, -2, -9]
 
-
-
-
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = selectiveMap;

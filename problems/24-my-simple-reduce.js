@@ -34,14 +34,13 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   optional initial accumulator
 *******************************************************************************/
 
-let mySimpleReduce = function() {
-
+let mySimpleReduce = function (arr, cb) {
+  let count = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    count = cb(count, arr[i]);
+  }
+  return count;
 };
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = mySimpleReduce;

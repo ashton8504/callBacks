@@ -26,14 +26,16 @@ let result4 = count(['follow', 'the', 'yellow', 'brick', 'road'], function (str)
 console.log(result4); // 0
 *******************************************************************************/
 
-let count = function() {
+let count = function (arr, cb) {
+  let count = 0;
 
+  for (let i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      count++;
+    }
+  }
+  return count;
 };
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = count;
